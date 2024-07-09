@@ -26,7 +26,7 @@ const Hero = () => (
         </Grid>
         <Grid item md={5} sx={{ position: 'relative', overflow: { xs: 'hidden', md: 'visible' } }}>
           <img
-            src="./public/images/illustration-working.svg"
+            src="./images/illustration-working.svg"
             alt="image_hero"
             loading="lazy"
             width="600px"
