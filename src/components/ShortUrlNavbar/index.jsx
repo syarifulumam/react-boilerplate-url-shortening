@@ -62,13 +62,7 @@ const Navbar = ({ locale }) => {
           </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }} gap={2}>
             <FormControl sx={{ minWidth: 120 }} size="small">
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={language}
-                label="Age"
-                onChange={(e) => handleChange(e.target.value)}
-              >
+              <Select id="demo-simple-select" value={language} onChange={(e) => handleChange(e.target.value)}>
                 <MenuItem value="en">English</MenuItem>
                 <MenuItem value="id">Indonesia</MenuItem>
               </Select>
