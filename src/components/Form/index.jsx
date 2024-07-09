@@ -20,7 +20,7 @@ const From = () => {
       <Box
         sx={{
           backgroundColor: '#3a3053',
-          backgroundImage: 'url(/src/static/images/images/bg-shorten-desktop.svg)',
+          backgroundImage: 'url(./images/bg-shorten-desktop.svg)',
           backgroundRepeat: 'no-repeat',
           objectFit: 'contain',
           height: '100px',
@@ -31,7 +31,11 @@ const From = () => {
           borderRadius: '5px',
         }}
       >
-        <form onSubmit={handleSubmit} style={{ display: 'flex', width: '80%', gap: '10px' }}>
+        <Box
+          component="form"
+          onSubmit={handleSubmit}
+          sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: '10px', width: '80%' }}
+        >
           <Input
             onChange={(e) => setInputLink(e.target.value)}
             value={inputLink}
@@ -46,13 +50,13 @@ const From = () => {
             type="submit"
             sx={{
               backgroundColor: '#2bd0d1',
-              width: '200px',
+              width: { xs: '100%', md: '200px' },
               '&: hover': { backgroundColor: '#2bd0d1', opacity: 0.7 },
             }}
           >
             <FormattedMessage id="app_form_button" />
           </Button>
-        </form>
+        </Box>
       </Box>
     </Container>
   );

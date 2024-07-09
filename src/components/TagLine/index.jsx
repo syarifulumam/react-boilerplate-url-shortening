@@ -5,7 +5,7 @@ const TagLine = () => (
   <Box
     sx={{
       textAlign: 'center',
-      backgroundImage: 'url(/src/static/images/images/bg-boost-desktop.svg)',
+      backgroundImage: 'url(./images/bg-boost-desktop.svg)',
       height: '200px',
       backgroundColor: '#3a3053',
       color: 'white',
