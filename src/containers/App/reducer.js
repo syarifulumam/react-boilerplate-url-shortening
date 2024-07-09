@@ -1,10 +1,18 @@
 import { produce } from 'immer';
 
-import { SET_LOCAL, SET_THEME, SET_POPUP, SET_LOADING, SET_DATA, SET_COUNTRY_LIST } from '@containers/App/constants';
+import {
+  SET_LOCAL,
+  SET_THEME,
+  SET_POPUP,
+  SET_LOADING,
+  SET_DATA,
+  SET_COUNTRY_LIST,
+  SET_SHORT_LINK,
+} from '@containers/App/constants';
 
 export const initialState = {
   locale: 'en',
-  theme: 'dark',
+  theme: 'light',
   popup: {
     open: false,
     title: '',
@@ -13,9 +21,10 @@ export const initialState = {
   data: [],
   loading: false,
   countryList: [],
+  shortLink: [],
 };
 
-export const storedKey = ['locale', 'theme'];
+export const storedKey = ['locale', 'theme', 'shortLink'];
 
 const appReducer = (state = initialState, action) =>
   produce(state, (draft) => {
@@ -37,6 +46,9 @@ const appReducer = (state = initialState, action) =>
         break;
       case SET_COUNTRY_LIST:
         draft.countryList = action.countryList;
+        break;
+      case SET_SHORT_LINK:
+        draft.shortLink = action.shortLink;
         break;
     }
   });

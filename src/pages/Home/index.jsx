@@ -13,7 +13,7 @@ const Home = ({ countryList }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(countryList, 'country list redux');
+    // console.log(countryList, 'country list redux');
   }, [countryList]);
 
   useEffect(() => {

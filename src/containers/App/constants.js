@@ -6,3 +6,7 @@ export const SET_DATA = 'App/SET_DATA';
 export const GET_DATA = 'App/GET_DATA';
 export const GET_COUNTRY_LIST = 'App/GET_COUNTRY_LIST';
 export const SET_COUNTRY_LIST = 'App/SET_COUNTRY_LIST';
+
+export const SET_SHORT_LINK = 'App/SET_SHORT_LINK';
+
+export const POST_SHORT_LINK = 'App/POST_SHORT_LINK';

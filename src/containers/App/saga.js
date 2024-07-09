@@ -1,8 +1,9 @@
-import { takeLatest, call, put } from 'redux-saga/effects';
+import { takeLatest, call, put, select } from 'redux-saga/effects';
 
-import { getData, getCountryList } from '@domain/api';
-import { showPopup, setLoading, setData, setCountryList } from '@containers/App/actions';
-import { GET_DATA, GET_COUNTRY_LIST } from '@containers/App/constants';
+import { getData, getCountryList, postShortLink } from '@domain/api';
+import { showPopup, setLoading, setData, setCountryList, setShortLink } from '@containers/App/actions';
+import { GET_DATA, GET_COUNTRY_LIST, POST_SHORT_LINK } from '@containers/App/constants';
+import { selectShortLink } from './selectors';
 
 function* doGetData() {
   yield put(setLoading(true));
@@ -30,7 +31,22 @@ function* doGetCountryList() {
   yield put(setLoading(false));
 }
 
+function* doPostShortLink({ data }) {
+  yield put(setLoading(true));
+  const shortLink = yield select(selectShortLink);
+  try {
+    const response = yield call(postShortLink, data);
+    if (response) {
+      yield put(setShortLink([...shortLink, response]));
+    }
+  } catch (error) {
+    yield put(showPopup(error.message));
+  }
+  yield put(setLoading(false));
+}
+
 export default function* appSaga() {
   yield takeLatest(GET_DATA, doGetData);
   yield takeLatest(GET_COUNTRY_LIST, doGetCountryList);
+  yield takeLatest(POST_SHORT_LINK, doPostShortLink);
 }
