@@ -128,28 +128,28 @@ const Footer = () => (
         </Grid>
         <Grid item md={3} xs={12} sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
           <img
-            src="/src/static/images/images/icon-facebook.svg"
+            src="public/images/icon-facebook.svg"
             alt="facebook"
             width={24}
             height={24}
             className={classes.iconSosmed}
           />
           <img
-            src="/src/static/images/images/icon-twitter.svg"
+            src="public/images/icon-twitter.svg"
             alt="twitter"
             width={24}
             height={24}
             className={classes.iconSosmed}
           />
           <img
-            src="/src/static/images/images/icon-pinterest.svg"
+            src="public/images/icon-pinterest.svg"
             alt="pinterest"
             width={24}
             height={24}
             className={classes.iconSosmed}
           />
           <img
-            src="/src/static/images/images/icon-instagram.svg"
+            src="public/images/icon-instagram.svg"
             alt="instagram"
             width={24}
             height={24}

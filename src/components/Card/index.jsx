@@ -29,7 +29,7 @@ const CardList = () => (
             transform: 'translateX(-50%)',
           }}
         >
-          <img src="/src/static/images/images/icon-brand-recognition.svg" alt="recognition" />
+          <img src="public/images/icon-brand-recognition.svg" alt="recognition" />
         </Avatar>
         <Typography variant="h6" component="h2" fontWeight="bold" mt={4}>
           <FormattedMessage id="app_card_title1" />
@@ -60,7 +60,7 @@ const CardList = () => (
             transform: 'translateX(-50%)',
           }}
         >
-          <img src="/src/static/images/images/icon-detailed-records.svg" alt="recognition" />
+          <img src="public/images/icon-detailed-records.svg" alt="recognition" />
         </Avatar>
         <Typography variant="h6" component="h2" fontWeight="bold" mt={4}>
           <FormattedMessage id="app_card_title2" />
@@ -91,7 +91,7 @@ const CardList = () => (
             transform: 'translateX(-50%)',
           }}
         >
-          <img src="/src/static/images/images/icon-fully-customizable.svg" alt="recognition" />
+          <img src="public/images/icon-fully-customizable.svg" alt="recognition" />
         </Avatar>
         <Typography variant="h6" component="h2" fontWeight="bold" mt={4}>
           <FormattedMessage id="app_card_title3" />
