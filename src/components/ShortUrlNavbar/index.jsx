@@ -116,11 +116,9 @@ const Navbar = ({ locale }) => {
                 <MenuItem sx={{ justifyContent: 'center' }}>
                   <FormControl sx={{ minWidth: 120 }} size="small">
                     <Select
-                      labelId="demo-simple-select-label"
                       id="demo-simple-select"
                       value={language}
-                      label="Age"
-                      sx={{ color: 'white' }}
+                      sx={{ color: 'white', border: '1px solid white' }}
                       onChange={(e) => handleChange(e.target.value)}
                     >
                       <MenuItem value="en">English</MenuItem>

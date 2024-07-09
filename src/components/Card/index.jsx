@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import { Avatar } from '@mui/material';
 import { FormattedMessage } from 'react-intl';
 
+import classes from './style.module.scss';
+
 const CardList = () => (
   <Box
     sx={{
@@ -16,7 +18,7 @@ const CardList = () => (
       flexDirection: { xs: 'column', md: 'row' },
     }}
   >
-    <Card sx={{ maxWidth: 300, maxHeight: '300px', position: 'relative', overflow: 'visible' }}>
+    <Card sx={{ maxWidth: 300, maxHeight: '300px', position: 'relative', overflow: 'visible', zIndex: 2 }}>
       <CardContent>
         <Avatar
           sx={{
@@ -25,8 +27,8 @@ const CardList = () => (
             bgcolor: '#3a2f58',
             position: 'absolute',
             top: -40,
-            left: '50%',
-            transform: 'translateX(-50%)',
+            left: { xs: '50%', md: '5%' },
+            transform: { xs: 'translateX(-50%)', md: 'translateX(-5%)' },
           }}
         >
           <img src="./images/icon-brand-recognition.svg" alt="recognition" />
@@ -40,6 +42,7 @@ const CardList = () => (
       </CardContent>
     </Card>
     <Card
+      className={classes.card2}
       sx={{
         maxWidth: 300,
         maxHeight: '300px',
@@ -56,8 +59,9 @@ const CardList = () => (
             bgcolor: '#3a2f58',
             position: 'absolute',
             top: -40,
-            left: '50%',
-            transform: 'translateX(-50%)',
+            zIndex: 2,
+            left: { xs: '50%', md: '5%' },
+            transform: { xs: 'translateX(-50%)', md: 'translateX(-5%)' },
           }}
         >
           <img src="./images/icon-detailed-records.svg" alt="recognition" />
@@ -76,6 +80,7 @@ const CardList = () => (
         maxHeight: '300px',
         position: 'relative',
         overflow: 'visible',
+        zIndex: 2,
         mt: { xs: '30px', md: '160px' },
       }}
     >
@@ -87,8 +92,8 @@ const CardList = () => (
             bgcolor: '#3a2f58',
             position: 'absolute',
             top: -40,
-            left: '50%',
-            transform: 'translateX(-50%)',
+            left: { xs: '50%', md: '5%' },
+            transform: { xs: 'translateX(-50%)', md: 'translateX(-5%)' },
           }}
         >
           <img src="./images/icon-fully-customizable.svg" alt="recognition" />

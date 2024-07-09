@@ -37,10 +37,14 @@ function* doPostShortLink({ data }) {
   try {
     const response = yield call(postShortLink, data);
     if (response) {
-      yield put(setShortLink([...shortLink, response]));
+      if (shortLink.find((item) => item.url === response.url)) {
+        yield put(showPopup('Message', 'Short URL already exists!'));
+      } else {
+        yield put(setShortLink([...shortLink, response]));
+      }
     }
   } catch (error) {
-    yield put(showPopup(error.message));
+    yield put(showPopup('Message', 'Please insert valid URL'));
   }
   yield put(setLoading(false));
 }

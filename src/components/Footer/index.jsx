@@ -4,8 +4,6 @@ import { IconTwitter } from '@components/icon/IconTwitter';
 import { IconPinterest } from '@components/icon/IconPinterest';
 import { IconInstagram } from '@components/icon/IconInstagram';
 
-// import classes from './style.module.scss';
-
 const valueTrue = true;
 const Footer = () => (
   <Box sx={{ py: 5, backgroundColor: '#232027', color: 'white' }}>
