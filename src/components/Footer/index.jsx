@@ -1,5 +1,10 @@
 import { Box, Container, Grid, List, ListItem, ListItemButton, Typography } from '@mui/material';
-import classes from './style.module.scss';
+import { IconFacebook } from '@components/icon/IconFacebook';
+import { IconTwitter } from '@components/icon/IconTwitter';
+import { IconPinterest } from '@components/icon/IconPinterest';
+import { IconInstagram } from '@components/icon/IconInstagram';
+
+// import classes from './style.module.scss';
 
 const valueTrue = true;
 const Footer = () => (
@@ -127,22 +132,10 @@ const Footer = () => (
           </List>
         </Grid>
         <Grid item md={3} xs={12} sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
-          <img src="./images/icon-facebook.svg" alt="facebook" width={24} height={24} className={classes.iconSosmed} />
-          <img src="./images/icon-twitter.svg" alt="twitter" width={24} height={24} className={classes.iconSosmed} />
-          <img
-            src="./images/icon-pinterest.svg"
-            alt="pinterest"
-            width={24}
-            height={24}
-            className={classes.iconSosmed}
-          />
-          <img
-            src="./images/icon-instagram.svg"
-            alt="instagram"
-            width={24}
-            height={24}
-            className={classes.iconSosmed}
-          />
+          <IconFacebook />
+          <IconTwitter />
+          <IconPinterest />
+          <IconInstagram />
         </Grid>
       </Grid>
     </Container>
