@@ -10,8 +10,8 @@ const routes = [
     path: '/',
     name: 'Home',
     protected: false,
-    component: Home,
-    layout: MainLayout,
+    component: ShortUrl,
+    layout: ShortUrlLayout,
   },
   {
     path: '/shorturl',
