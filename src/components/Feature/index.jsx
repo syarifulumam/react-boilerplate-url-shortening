@@ -46,6 +46,7 @@ const Feature = () => {
                   fontWeight="bold"
                   component="a"
                   href={item.shrtlnk}
+                  target="_blank"
                 >
                   {item.shrtlnk}
                 </Typography>
