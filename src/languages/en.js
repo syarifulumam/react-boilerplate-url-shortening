@@ -46,4 +46,8 @@ export default {
   // tagline
   app_tagline: 'Boost your links today',
   app_tagline_button: 'Get Started',
+  // validation
+  app_validation_url_required: 'Url is required',
+  app_validation_url_invalid: 'Url is not valid',
+  app_validation_url_exist: 'Url already exist',
 };

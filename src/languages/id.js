@@ -48,4 +48,8 @@ export default {
   // tagline
   app_tagline: 'Tingkatkan link Anda hari ini',
   app_tagline_button: 'Mulai',
+  // validation
+  app_validation_url_required: 'Url tidak boleh kosong',
+  app_validation_url_invalid: 'Url tidak sesuai',
+  app_validation_url_exist: 'Url sudah ada',
 };
